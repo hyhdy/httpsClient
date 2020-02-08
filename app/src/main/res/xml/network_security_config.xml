@@ -2,7 +2,9 @@
 <network-security-config>
     <base-config cleartextTrafficPermitted="true">
         <trust-anchors>
+            <!--信任系统证书-->
             <certificates src="system" overridePins="true" />
+            <!--信任所有用户证书，用户自己手动安装的证书被归类为用户证书，比如Fiddler，Charles等代理工具的证书-->
             <certificates src="user" overridePins="true" />
         </trust-anchors>
     </base-config>

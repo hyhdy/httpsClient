@@ -46,11 +46,11 @@ public class MyApplication extends Application {
     public void onCreate() {
         Log.d("hyh", "MyApplication: onCreate: ");
         super.onCreate();
-        //initSSLTrustAll();
+        initSSLTrustAll();
 
         //initSSLTrustSelfAssets();
 
-        initSSLTrustSelfString();
+        //initSSLTrustSelfString();
     }
 
     public static OkHttpClient getOkHttpClient(){
