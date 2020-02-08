@@ -54,6 +54,9 @@ public class MyApplication extends Application {
     }
 
     public static OkHttpClient getOkHttpClient(){
+        if(mOkHttpClient == null){
+            mOkHttpClient = new OkHttpClient();
+        }
         return mOkHttpClient;
     }
 
@@ -61,54 +64,21 @@ public class MyApplication extends Application {
      * 初始化ssl并且信任所有证书（不推荐使用）
      */
     private void initSSLTrustAll(){
-        OkHttpClient.Builder builder = new OkHttpClient.Builder()
-        .connectTimeout(60, TimeUnit.SECONDS)
-        .sslSocketFactory(HttpsSSLHelper.createTrustAllSSLSocketFactory())
-        .hostnameVerifier(new HostnameVerifier() {
-            @Override
-            public boolean verify(String hostname, SSLSession session) {
-                //域名校验，默认都通过
-                return true;
-            }
-        });
-
-        mOkHttpClient = builder.build();
+        mOkHttpClient = HttpsSSLHelper.createTrushAllClient();
     }
 
     /**
      * 初始化ssl并且只信任自签名证书，从assets导入证书
      */
     private void initSSLTrustSelfAssets(){
-        OkHttpClient.Builder builder = new OkHttpClient.Builder()
-                .connectTimeout(60, TimeUnit.SECONDS)
-                .sslSocketFactory(HttpsSSLHelper.createTrustCustomSSLSocketFactory(getInputStreamFromAsset()))
-                .hostnameVerifier(new HostnameVerifier() {
-                    @Override
-                    public boolean verify(String hostname, SSLSession session) {
-                        //域名校验，默认都通过
-                        return true;
-                    }
-                });
-
-        mOkHttpClient = builder.build();
+        mOkHttpClient = HttpsSSLHelper.createTrustCustomClient(getInputStreamFromAsset());
     }
 
     /**
      * 初始化ssl并且只信任自签名证书，以rfc字符串导入证书
      */
     private void initSSLTrustSelfString(){
-        OkHttpClient.Builder builder = new OkHttpClient.Builder()
-                .connectTimeout(60, TimeUnit.SECONDS)
-                .sslSocketFactory(HttpsSSLHelper.createTrustCustomSSLSocketFactory(getInputStreamFromString()))
-                .hostnameVerifier(new HostnameVerifier() {
-                    @Override
-                    public boolean verify(String hostname, SSLSession session) {
-                        //域名校验，默认都通过
-                        return true;
-                    }
-                });
-
-        mOkHttpClient = builder.build();
+        mOkHttpClient = HttpsSSLHelper.createTrustCustomClient(getInputStreamFromString());
     }
 
     private InputStream getInputStreamFromAsset(){

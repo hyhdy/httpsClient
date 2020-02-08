@@ -60,15 +60,11 @@ public class MainActivity extends AppCompatActivity {
     }
 
     String get(String url) throws IOException {
-        OkHttpClient okHttpClient = new OkHttpClient();
-
         Request request = new Request.Builder()
                 .url(url)
                 .build();
 
         Response response = MyApplication.getOkHttpClient().newCall(request).execute();
         return response.body().string();
-
-
     }
 }
