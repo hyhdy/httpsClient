@@ -140,7 +140,7 @@ public class HttpsSSLHelper {
     }
 
     /**
-     * 创建指定所有证书的TrustManager
+     * 创建信任所有证书的TrustManager
      * @return
      */
     private static X509TrustManager createTrustAllTrustManager() {

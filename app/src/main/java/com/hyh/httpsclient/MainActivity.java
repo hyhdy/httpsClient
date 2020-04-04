@@ -14,7 +14,7 @@ import okhttp3.Response;
 
 public class MainActivity extends AppCompatActivity {
     public static final String URL_CA = "https://www.baidu.com/";
-    public static final String URL_SELF = "https://192.168.0.101:8443/";
+    public static final String URL_SELF = "https://192.168.0.103:8443/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Log.d("hyh", "MainActivity: getCa: response="+response);
+                Log.d("ssl_test", "MainActivity: getCa: response="+response);
             }
         };
         Thread thread = new Thread(runnable);
@@ -52,7 +52,7 @@ public class MainActivity extends AppCompatActivity {
                 } catch (IOException e) {
                     e.printStackTrace();
                 }
-                Log.d("hyh", "MainActivity: getSelf: response="+response);
+                Log.d("ssl_test", "MainActivity: getSelf: response="+response);
             }
         };
         Thread thread = new Thread(runnable);

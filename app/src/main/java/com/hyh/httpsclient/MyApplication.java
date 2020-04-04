@@ -22,24 +22,24 @@ public class MyApplication extends Application {
 
     //rfc格式的证书
     private String CER_HYH = "-----BEGIN CERTIFICATE-----\n" +
-            "MIIDRzCCAi+gAwIBAgIEdP3RdTANBgkqhkiG9w0BAQsFADBUMQwwCgYDVQQGEwNo\n" +
-            "eWgxDDAKBgNVBAgTA2h5aDEMMAoGA1UEBxMDaHloMQwwCgYDVQQKEwNoeWgxDDAK\n" +
-            "BgNVBAsTA2h5aDEMMAoGA1UEAxMDaHloMB4XDTIwMDEyODEyNDc1NFoXDTI5MTIw\n" +
-            "NjEyNDc1NFowVDEMMAoGA1UEBhMDaHloMQwwCgYDVQQIEwNoeWgxDDAKBgNVBAcT\n" +
-            "A2h5aDEMMAoGA1UEChMDaHloMQwwCgYDVQQLEwNoeWgxDDAKBgNVBAMTA2h5aDCC\n" +
-            "ASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAK64XX+OdIz/7fQb7TtUTG/1\n" +
-            "dDVL85h9C8zrkj+kM2EDmYq21Er+/btLVN1qXTZmlEQOoiCbNVYkpQmXJkurf2At\n" +
-            "orzor6VtJAJ5WwY01SwkpO3IROWb8eH/r8vk3Kmh4KawZqPDru1V/KFjo7QHNgkc\n" +
-            "ymCjit6iOUkK8OX7a6vfc6wTFaF2vXoKjkKET6D8ft8rAjMyOpnXTqLzJoRbfcJ/\n" +
-            "yCJrKP1u4HjpMe7H0Y2OokFcT45i5NrpiwDv6JQvgU2pxfFdTiH1qvHopHtM+fA+\n" +
-            "z0x51osOz848Bn2rZpcFKqW0pnjkmrs8lbZWS0qVWY8yYIK4NayRKPasKcFKWGcC\n" +
-            "AwEAAaMhMB8wHQYDVR0OBBYEFFu2j/scKOh6PUZjjtqkwDczjNx3MA0GCSqGSIb3\n" +
-            "DQEBCwUAA4IBAQBMFXy0+GIxG1pB9qGJpsmjNm5FNd2mlGAfF/yMdGxI4w3WvSXF\n" +
-            "nnjaQDNBQvwLH7FiGaAp8mzoeQsXN4O7vepRofg0eB0wDMbM3uARR7vEtMuGJyUx\n" +
-            "5WrY8paQovzZXYQsZdRSqK3SjZs8LObYrjeXL/y9AZqMJk8L/2B6HvSn/q8D9EBe\n" +
-            "6qjfFPxDjX/yWxw745MnF9ookcBHMfQfQrMUvYtveIB2QM5xSYie6TikHlIQ23Ja\n" +
-            "UpoEQ4JBhjznpTKkZKa1I8nQzZVlvmevs/cd2S6DFolnepvNzbbpE+NuxW3dcyKx\n" +
-            "XWt2bQ9EkJdHacanYJVkWZ+Gwl1jzGVEn16N\n" +
+            "MIIDOzCCAiOgAwIBAgIEXZVqZDANBgkqhkiG9w0BAQsFADBOMQswCQYDVQQGEwJo\n" +
+            "aDELMAkGA1UECBMCaGgxCzAJBgNVBAcTAmhoMQswCQYDVQQKEwJoaDELMAkGA1UE\n" +
+            "CxMCaGgxCzAJBgNVBAMTAmhoMB4XDTIwMDQwNDEwMjEyNFoXDTMwMDIxMTEwMjEy\n" +
+            "NFowTjELMAkGA1UEBhMCaGgxCzAJBgNVBAgTAmhoMQswCQYDVQQHEwJoaDELMAkG\n" +
+            "A1UEChMCaGgxCzAJBgNVBAsTAmhoMQswCQYDVQQDEwJoaDCCASIwDQYJKoZIhvcN\n" +
+            "AQEBBQADggEPADCCAQoCggEBAKkCLt6IMQLDkCtKvmBkmw0sNovuiiduse64bFqW\n" +
+            "o4HD9CTUNBDxKqY6TWi5CBaqIzINvveQK5h2vM5or60eVq0x5QSplOfru7yHPlpw\n" +
+            "BdnpZ7ffISqUAHggpEmPf4nCKabF7D9HfTn3ZqgI/LelnxAOxzxyFfDwah6h3Xph\n" +
+            "9ySC6uHJxrjbgsR8C84rnqw540D7MY4HE/rhDuRzTP1LH9/70LDHeUsCkMfRQ4A6\n" +
+            "Z4CTDzYP7ATx4P35WoejihitEdBMquLZ2XYNDklRvGWJ2XkS2cteJUWzEdYVdnxV\n" +
+            "fjYAiwu9mORtPwX9YiyoRdAnOSpiya/PnPjBlFOJZSsY5o0CAwEAAaMhMB8wHQYD\n" +
+            "VR0OBBYEFMzRbwBzE5NrSFXRCNXgfddfLh/fMA0GCSqGSIb3DQEBCwUAA4IBAQAP\n" +
+            "3/v7oZPx4++176BtEGhTy/xchMI1gqfxiM54j1bvjFN+90VQ3OdFStvMQWKP1tlm\n" +
+            "EJHfL0ayLcVUsqiWRlykroWo9kEE9sOhbnZ8l9PGbPwbK5bYDXS80v+fx1e4mFxC\n" +
+            "wrU/KLPqnG1GIdB8q+y+B8PgB8zUl5oLgaqN86jg+hc2kv5vD2n3RXvopZCO0/Mf\n" +
+            "qODZ08gSBZeCDOXwgn1PpRijBxp7n4VG3Pb73L+A7dmA9aXGhvXDMIevDhLCc7hw\n" +
+            "xBw8RmCyioDafdY7l4CVpvue1R6r4GJTPcQipJ2kEM4FagVwomtQvQRSoxr2ZTnY\n" +
+            "6bIW+OcdKMaquNMgWsIA\n" +
             "-----END CERTIFICATE-----\n";
 
     @Override
@@ -78,13 +78,13 @@ public class MyApplication extends Application {
      * 初始化ssl并且只信任自签名证书，以rfc字符串导入证书
      */
     private void initSSLTrustSelfString(){
-        mOkHttpClient = HttpsSSLHelper.createTrustCustomClient(getInputStreamFromString());
+        mOkHttpClient = HttpsSSLHelper.createTrustCustomClient(getInputStreamFromString(CER_HYH));
     }
 
     private InputStream getInputStreamFromAsset(){
         InputStream inputStream = null;
         try {
-            inputStream = getAssets().open("hyh_server.cer");
+            inputStream = getAssets().open("my_server.cer");
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -95,9 +95,9 @@ public class MyApplication extends Application {
      * 以rfc字符串形式导入证书流（推荐使用，因为不用常见assets文件占用包大小）
      * @return
      */
-    private InputStream getInputStreamFromString(){
+    private InputStream getInputStreamFromString(String rfc){
         return new Buffer()
-                .writeUtf8(CER_HYH)
+                .writeUtf8(rfc)
                 .inputStream();
     }
 }
